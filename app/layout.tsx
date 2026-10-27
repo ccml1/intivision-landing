@@ -11,32 +11,13 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Brutalist AI SaaS Landing Page Template | Engineering-Grade Dark UI Kit',
+  title: 'VIGÍA — Videovigilancia inteligente para comunidades',
   description:
-    'A brutalist, engineering-themed landing page template for AI infrastructure and SaaS products. Features Geist Pixel typography, dot-grid backgrounds, live terminal animations, scramble-text micro-interactions, bento feature grids, isometric 3D illustrations, and a fully responsive dark industrial design system. Built with Next.js 16, Tailwind CSS, and Framer Motion.',
-  keywords: [
-    'brutalist landing page template',
-    'AI SaaS template',
-    'engineering UI kit',
-    'Next.js landing page',
-    'Tailwind CSS template',
-    'dark UI template',
-    'Geist Pixel font',
-    'bento grid layout',
-    'SaaS pricing page',
-    'Framer Motion animations',
-    'monospace design system',
-    'developer landing page',
-    'AI infrastructure template',
-    'industrial web design',
-    'dot matrix typography',
-    'terminal UI components',
-    'startup landing page',
-    'tech landing page template',
-  ],
-  authors: [{ name: 'SYS.INT' }],
-  creator: 'System Intelligence Corp.',
-  publisher: 'System Intelligence Corp.',
+    'VIGÍA detecta amenazas en las cámaras de tu comunidad con IA y avisa a los vecinos al instante. Desarrollado en Lima, con piloto en preparación para La Molina.',
+  keywords: ['VIGÍA', 'videovigilancia inteligente', 'seguridad vecinal', 'IA para cámaras', 'Lima', 'La Molina'],
+  authors: [{ name: 'VIGÍA' }],
+  creator: 'VIGÍA',
+  publisher: 'VIGÍA',
   robots: {
     index: true,
     follow: true,
@@ -50,24 +31,23 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
-    title: 'Brutalist AI SaaS Landing Page Template | Engineering-Grade Dark UI Kit',
-    description:
-      'A brutalist, engineering-themed landing page template for AI and SaaS products. Geist Pixel typography, terminal animations, bento grids, scramble-text effects, and a full industrial design system. Next.js 16 + Tailwind CSS + Framer Motion.',
-    siteName: 'SYS.INT Template',
+    locale: 'es_PE',
+    title: 'VIGÍA — Videovigilancia inteligente para comunidades',
+    description: 'Detecta amenazas con IA y avisa a tus vecinos al instante.',
+    siteName: 'VIGÍA',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Brutalist AI SaaS Landing Page Template',
-    description:
-      'Engineering-grade brutalist template for AI SaaS products. Dot-grid backgrounds, live terminal animations, Geist Pixel typography, bento feature grids, and scramble-text micro-interactions. Built with Next.js 16.',
-    creator: '@sysint',
+    title: 'VIGÍA — Videovigilancia inteligente',
+    description: 'Seguridad inteligente para comunidades en Lima.',
+    creator: '@vigia',
   },
   category: 'technology',
+  icons: { icon: '/vigia-camera.svg' },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#F2F1EA',
+  themeColor: '#FF6A00',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
@@ -79,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${jetbrainsMono.variable} ${GeistPixelGrid.variable}`} suppressHydrationWarning>
+    <html lang="es-PE" className={`${jetbrainsMono.variable} ${GeistPixelGrid.variable}`} suppressHydrationWarning>
       <body className="font-mono antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
           {children}
