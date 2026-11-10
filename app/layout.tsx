@@ -11,13 +11,13 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'VIGÍA — Videovigilancia inteligente para comunidades',
+  title: 'INTISION — Videovigilancia inteligente para comunidades',
   description:
-    'VIGÍA detecta amenazas en las cámaras de tu comunidad con IA y avisa a los vecinos al instante. Desarrollado en Lima, con piloto en preparación para La Molina.',
-  keywords: ['VIGÍA', 'videovigilancia inteligente', 'seguridad vecinal', 'IA para cámaras', 'Lima', 'La Molina'],
-  authors: [{ name: 'VIGÍA' }],
-  creator: 'VIGÍA',
-  publisher: 'VIGÍA',
+    'INTISION detecta amenazas en las cámaras de tu comunidad con IA y avisa a los vecinos al instante. Desarrollado en Lima, con piloto en preparación para La Molina.',
+  keywords: ['INTISION', 'videovigilancia inteligente', 'seguridad vecinal', 'IA para cámaras', 'Lima', 'La Molina'],
+  authors: [{ name: 'INTISION' }],
+  creator: 'INTISION',
+  publisher: 'INTISION',
   robots: {
     index: true,
     follow: true,
@@ -32,18 +32,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_PE',
-    title: 'VIGÍA — Videovigilancia inteligente para comunidades',
+    title: 'INTISION — Videovigilancia inteligente para comunidades',
     description: 'Detecta amenazas con IA y avisa a tus vecinos al instante.',
-    siteName: 'VIGÍA',
+    siteName: 'INTISION',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VIGÍA — Videovigilancia inteligente',
+    title: 'INTISION — Videovigilancia inteligente',
     description: 'Seguridad inteligente para comunidades en Lima.',
-    creator: '@vigia',
+    creator: '@intision',
   },
   category: 'technology',
-  icons: { icon: '/vigia-camera.svg' },
+  icons: { icon: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO%20INTIVISION-cAsSrWTPx2KXllELgzqFHsEoPvEZ8G.png' },
 }
 
 export const viewport: Viewport = {
