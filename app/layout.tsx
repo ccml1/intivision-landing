@@ -59,8 +59,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es-PE" className={`${jetbrainsMono.variable} ${GeistPixelGrid.variable}`}>
-      <body className="font-mono antialiased">
+    <html lang="es-PE">
+      <body className={`font-mono antialiased ${jetbrainsMono.variable} ${GeistPixelGrid.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} enableColorScheme={false} disableTransitionOnChange>
           {children}
         </ThemeProvider>
