@@ -11,13 +11,13 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'INTISION — Videovigilancia inteligente para comunidades',
+  title: 'INTIVISION — Videovigilancia inteligente para comunidades',
   description:
-    'INTISION detecta amenazas en las cámaras de tu comunidad con IA y avisa a los vecinos al instante. Desarrollado en Lima, con piloto en preparación para La Molina.',
-  keywords: ['INTISION', 'videovigilancia inteligente', 'seguridad vecinal', 'IA para cámaras', 'Lima', 'La Molina'],
-  authors: [{ name: 'INTISION' }],
-  creator: 'INTISION',
-  publisher: 'INTISION',
+    'INTIVISION detecta amenazas en las cámaras de tu comunidad con IA y avisa a los vecinos al instante. Desarrollado en Lima, con piloto en preparación para La Molina.',
+  keywords: ['INTIVISION', 'videovigilancia inteligente', 'seguridad vecinal', 'IA para cámaras', 'Lima', 'La Molina'],
+  authors: [{ name: 'INTIVISION' }],
+  creator: 'INTIVISION',
+  publisher: 'INTIVISION',
   robots: {
     index: true,
     follow: true,
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_PE',
-    title: 'INTISION — Videovigilancia inteligente para comunidades',
+    title: 'INTIVISION — Videovigilancia inteligente para comunidades',
     description: 'Detecta amenazas con IA y avisa a tus vecinos al instante.',
-    siteName: 'INTISION',
+    siteName: 'INTIVISION',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'INTISION — Videovigilancia inteligente',
+    title: 'INTIVISION — Videovigilancia inteligente',
     description: 'Seguridad inteligente para comunidades en Lima.',
     creator: '@intision',
   },
