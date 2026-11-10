@@ -11,13 +11,13 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'VIGÍA — Videovigilancia inteligente para comunidades',
+  title: 'INTIVISION — Videovigilancia inteligente para comunidades',
   description:
-    'VIGÍA detecta amenazas en las cámaras de tu comunidad con IA y avisa a los vecinos al instante. Desarrollado en Lima, con piloto en preparación para La Molina.',
-  keywords: ['VIGÍA', 'videovigilancia inteligente', 'seguridad vecinal', 'IA para cámaras', 'Lima', 'La Molina'],
-  authors: [{ name: 'VIGÍA' }],
-  creator: 'VIGÍA',
-  publisher: 'VIGÍA',
+    'INTIVISION detecta amenazas en las cámaras de tu comunidad con IA y avisa a los vecinos al instante. Desarrollado en Lima, con piloto en preparación para La Molina.',
+  keywords: ['INTIVISION', 'videovigilancia inteligente', 'seguridad vecinal', 'IA para cámaras', 'Lima', 'La Molina'],
+  authors: [{ name: 'INTIVISION' }],
+  creator: 'INTIVISION',
+  publisher: 'INTIVISION',
   robots: {
     index: true,
     follow: true,
@@ -32,18 +32,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_PE',
-    title: 'VIGÍA — Videovigilancia inteligente para comunidades',
+    title: 'INTIVISION — Videovigilancia inteligente para comunidades',
     description: 'Detecta amenazas con IA y avisa a tus vecinos al instante.',
-    siteName: 'VIGÍA',
+    siteName: 'INTIVISION',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VIGÍA — Videovigilancia inteligente',
+    title: 'INTIVISION — Videovigilancia inteligente',
     description: 'Seguridad inteligente para comunidades en Lima.',
-    creator: '@vigia',
+    creator: '@intivision',
   },
   category: 'technology',
-  icons: { icon: '/vigia-camera.svg' },
+  icons: { icon: '/images/intivision-logo.png' },
 }
 
 export const viewport: Viewport = {
@@ -59,9 +59,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es-PE" className={`${jetbrainsMono.variable} ${GeistPixelGrid.variable}`} suppressHydrationWarning>
-      <body className="font-mono antialiased">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+    <html lang="es-PE">
+      <body className={`font-mono antialiased ${jetbrainsMono.variable} ${GeistPixelGrid.variable}`}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} enableColorScheme={false} disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>
