@@ -35,8 +35,8 @@ function DemoPanel() {
   useEffect(() => { const id = window.setInterval(() => setLine((value) => (value + 1) % terminalLines.length), 1500); return () => window.clearInterval(id) }, [])
   return <div className="grid gap-4 lg:grid-cols-[1.2fr_1fr_0.8fr]">
     <div className="hard-panel bg-black text-[#f2f0e7]">
-      <div className="panel-head"><span>terminal.intision</span><span className="text-accent">DEMO / SIMULACIÓN</span></div>
-      <div className="min-h-64 p-4 font-mono text-[11px] leading-7"><div className="mb-3 text-accent">intision@lima:~$ monitor --cam CAM-01</div>{terminalLines.map((item, index) => <div key={item} className={index === line ? "text-accent" : "text-white/65"}>{index === line ? "› " : "  "}{item}</div>)}<span className="animate-blink text-accent">_</span></div>
+      <div className="panel-head"><span>terminal.intivision</span><span className="text-accent">DEMO / SIMULACIÓN</span></div>
+      <div className="min-h-64 p-4 font-mono text-[11px] leading-7"><div className="mb-3 text-accent">intivision@lima:~$ monitor --cam CAM-01</div>{terminalLines.map((item, index) => <div key={item} className={index === line ? "text-accent" : "text-white/65"}>{index === line ? "› " : "  "}{item}</div>)}<span className="animate-blink text-accent">_</span></div>
     </div>
     <div className="hard-panel bg-[#171716] text-white">
       <div className="panel-head"><span>camara_01.feed</span><span className="text-accent">LIVE</span></div>

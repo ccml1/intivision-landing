@@ -40,10 +40,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'INTIVISION — Videovigilancia inteligente',
     description: 'Seguridad inteligente para comunidades en Lima.',
-    creator: '@intision',
+    creator: '@intivision',
   },
   category: 'technology',
-  icons: { icon: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO%20INTIVISION-cAsSrWTPx2KXllELgzqFHsEoPvEZ8G.png' },
+  icons: { icon: '/images/intivision-logo.png' },
 }
 
 export const viewport: Viewport = {
@@ -59,9 +59,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es-PE" className={`${jetbrainsMono.variable} ${GeistPixelGrid.variable}`} suppressHydrationWarning>
+    <html lang="es-PE" className={`${jetbrainsMono.variable} ${GeistPixelGrid.variable}`}>
       <body className="font-mono antialiased">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} enableColorScheme={false} disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>
