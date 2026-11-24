@@ -52,10 +52,10 @@ export function Navbar() {
           >
             <ThemeToggle />
             <a
-              href="#"
+              href="https://app.intivision.online/login"
               className="hidden sm:block text-xs font-mono tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
-              Log In
+              Ingresar
             </a>
             <motion.button
               whileHover={{ scale: 1.02 }}

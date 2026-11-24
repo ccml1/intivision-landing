@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 const ease = [0.22, 1, 0.36, 1] as const
 
 /* ── scramble-in price effect ── */
-function ScramblePrice({ target, prefix = "$" }: { target: string; prefix?: string }) {
+function ScramblePrice({ target, prefix = "S/ " }: { target: string; prefix?: string }) {
   const [display, setDisplay] = useState(target.replace(/[0-9]/g, "0"))
 
   useEffect(() => {
@@ -75,69 +75,75 @@ interface Tier {
   description: string
   features: { text: string; included: boolean }[]
   cta: string
+  href: string
   highlighted: boolean
 }
 
+const APP = "https://app.intivision.online"
+
 const TIERS: Tier[] = [
   {
-    id: "open-source",
-    name: "OPEN_SOURCE",
-    price: "0",
-    period: "/ forever",
+    id: "base",
+    name: "PLAN_BASE",
+    price: "19.90",
+    period: "/ vivienda al mes",
     tag: null,
-    description: "Community-grade inference. Rate-limited. No SLA.",
+    description: "Lo cobra tu junta vecinal en la cuota de la comunidad.",
     features: [
-      { text: "10K requests / month", included: true },
-      { text: "Community models", included: true },
-      { text: "Shared compute pool", included: true },
-      { text: "Single region", included: true },
-      { text: "Priority routing", included: false },
-      { text: "Dedicated support", included: false },
+      { text: "Detección de personas y posturas de riesgo", included: true },
+      { text: "Alertas con foto por Telegram", included: true },
+      { text: "Revisión del administrador", included: true },
+      { text: "Fotos por 7 días", included: true },
+      { text: "Clip de video de 20 s", included: false },
+      { text: "Detección de posibles armas", included: false },
     ],
-    cta: "DEPLOY FREE",
+    cta: "INGRESAR",
+    href: `${APP}/login`,
     highlighted: false,
   },
   {
-    id: "pro",
-    name: "PRO_TIER",
-    price: "249",
-    period: "/ month",
-    tag: "RECOMMENDED",
-    description: "Production-grade. Sub-5ms latency. 99.97% uptime SLA.",
+    id: "premium",
+    name: "PREMIUM_VIVIENDA",
+    price: "39.90",
+    period: "/ mes",
+    tag: "RECOMENDADO",
+    description: "Para tus cámaras privadas. Cancela cuando quieras.",
     features: [
-      { text: "Unlimited requests", included: true },
-      { text: "All 147 foundation models", included: true },
-      { text: "Dedicated compute", included: true },
-      { text: "12-region edge deployment", included: true },
-      { text: "Priority routing", included: true },
-      { text: "Dedicated support", included: false },
+      { text: "Todo lo del Plan Base", included: true },
+      { text: "Clip de video de 20 s en Telegram", included: true },
+      { text: "Detección de posibles armas", included: true },
+      { text: "Detección más precisa", included: true },
+      { text: "Fotos y clips por 90 días", included: true },
+      { text: "Evidencia con huella SHA-256", included: true },
     ],
-    cta: "START BUILDING",
+    cta: "PASAR A PREMIUM",
+    href: `${APP}/plan`,
     highlighted: true,
   },
   {
-    id: "enterprise",
-    name: "ENTERPRISE",
-    price: "CUSTOM",
-    period: "",
+    id: "comunidad",
+    name: "PREMIUM_COMUNIDAD",
+    price: "299",
+    period: "/ mes por cuadra",
     tag: null,
-    description: "Air-gapped. On-prem. Full operational control.",
+    description: "Lo paga la junta: Premium para todas las cámaras de la comunidad.",
     features: [
-      { text: "Unlimited everything", included: true },
-      { text: "Custom model fine-tuning", included: true },
-      { text: "Dedicated cluster", included: true },
-      { text: "50+ edge regions", included: true },
-      { text: "Custom SLA", included: true },
-      { text: "24/7 dedicated engineering", included: true },
+      { text: "Premium en todas las cámaras", included: true },
+      { text: "Conviene desde unas 8 viviendas", included: true },
+      { text: "Resumen semanal por Telegram", included: true },
+      { text: "Panel de incidentes y mapa", included: true },
+      { text: "Un solo pago para la comunidad", included: true },
+      { text: "Cancela cuando quieras", included: true },
     ],
-    cta: "CONTACT SALES",
+    cta: "ACTIVAR PARA LA COMUNIDAD",
+    href: `${APP}/plan`,
     highlighted: false,
   },
 ]
 
 /* ── single pricing card ── */
 function PricingCard({ tier, index }: { tier: Tier; index: number }) {
-  const isCustom = tier.price === "CUSTOM"
+  const isCustom = false
 
   return (
     <motion.div
@@ -250,7 +256,8 @@ function PricingCard({ tier, index }: { tier: Tier; index: number }) {
 
       {/* CTA */}
       <div className="px-5 pb-5 pt-3">
-        <motion.button
+        <motion.a
+          href={tier.href}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.97 }}
           className={`group w-full flex items-center justify-center gap-0 text-xs font-mono tracking-wider uppercase ${
@@ -263,7 +270,7 @@ function PricingCard({ tier, index }: { tier: Tier; index: number }) {
             <ArrowRight size={14} strokeWidth={2} className="text-background" />
           </span>
           <span className="flex-1 py-2.5">{tier.cta}</span>
-        </motion.button>
+        </motion.a>
       </div>
     </motion.div>
   )

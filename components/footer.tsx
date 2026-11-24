@@ -19,7 +19,7 @@ export function Footer() {
             SYS.INT
           </span>
           <span className="text-[10px] font-mono tracking-widest text-muted-foreground">
-            {"(C) 2026 SYSTEM INTELLIGENCE CORP."}
+            {"(C) 2026 INTIVISION"}
           </span>
         </div>
         <div className="flex items-center gap-6">
